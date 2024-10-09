@@ -1,14 +1,12 @@
-// add money event handler
-
-// step 1 = add event handler + prevent page reload
+// input-cashout  
 
 
-document.getElementById("btn-add-money").addEventListener("click", function (event) {
+document.getElementById("btn-cashout").addEventListener("click", function (event) {
   // prevent reload
   event.preventDefault();
 
   // step2 = get money to be added to the current balance
-  const addMoneyInput = document.getElementById("input-add-money").value;
+  const cashoutMoneyInput = document.getElementById("input-cashout").value;
 
   // step 3 = check if the pin is right
   const pinNumberInput = document.getElementById("pin-number").value;
@@ -19,10 +17,10 @@ document.getElementById("btn-add-money").addEventListener("click", function (eve
     const currentBalance = document.getElementById("current-balance").innerText;
 
     // step 5 = add money
-    const newBalance = parseFloat(currentBalance) + parseFloat(addMoneyInput);
+    const newBalance = parseFloat(currentBalance) - parseFloat(cashoutMoneyInput);
 
     // step 6 = update balance
-    document.getElementById("current-balance").innerText = newBalance;
+    document.getElementById("current-balance").innerText = cashoutMoneyInput;
   }
 
   else {

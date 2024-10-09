@@ -19,7 +19,7 @@
           <div class="stats shadow">
             <div class="stat">
               
-              <div class="stat-value">89400 Taka</div>
+              <div id="current-balance" class="stat-value">89400 Taka</div>
               <div class="stat-desc">Available Balance</div>
 
               
@@ -36,7 +36,7 @@
           </div>
           <div class="divider"></div>
           <!-- add money form -->
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form class="card-body">
               <div class="form-control">
                 <label class="label">
@@ -61,6 +61,32 @@
             </form>
           </div>
           <!-- add money form end -->
+
+          <!-- cashout form -->
+          <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input id="input-cashout" type="text" placeholder="Enter amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <input id="pin-number" type="password" placeholder="Enter Pin" class="input input-bordered" required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
+                </label>
+              </div>
+
+              <!-- add money button -->
+              <div class="form-control mt-6">
+                <button id="btn-cashout" class="btn btn-primary">Cash Out</button>
+              </div>
+            </form>
+          </div>
         </div>
         
       </div>
@@ -71,5 +97,6 @@
     
   </main>
   <script src="js/home.js"></script>
+  <script src="js/cashout.js"></script>
 </body>
 </html>
